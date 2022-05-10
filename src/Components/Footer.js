@@ -1,19 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 const Div = styled.div`
-  position: fixed;
   bottom: 0;
   width: 100vw;
+  
 `
-const links = {
-  textDecoration: "none",
-  color: 'black',
+const Links = styled.a`
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
  
-}
+`
 const Footer = () => {
   return (
     <Div>
-      <span> Built by <a style={links} href="https://github.com/StaceyLouis">Stacey Louis</a></span>
+      <span> Built by <Links  href="https://github.com/StaceyLouis">Stacey Louis</Links></span>
     </Div>
   )
 }
