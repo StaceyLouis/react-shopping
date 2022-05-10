@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 const Div = styled.div`
+position: absolute;
   bottom: 0;
   width: 100vw;
   

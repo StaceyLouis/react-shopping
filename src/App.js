@@ -7,6 +7,7 @@ import Footer from './Components/Footer'
 import Cart from './Components/Cart/Cart'
 import {CartProvider} from 'react-use-cart'
 import {Routes, Route} from 'react-router-dom'
+import Checkout from './Components/Checkout';
 
 function App() {
   const [product, setProduct] = useState([])
@@ -22,9 +23,10 @@ function App() {
       <CartProvider>
       <Header/>
       <Routes>
-        <Route path='/' element={<Header/>}/>
-      <Route path="/cart" element={<Store product={product}/>}/>
-      <Route path='/about' element={<Cart/>}/>
+        <Route path='/products' element={<Store product={product}/>}/>
+      <Route path="/about"/>
+      <Route path='/cart' element={<Cart product={product}/>}/>
+      <Route path="/checkout" element={<Checkout/>} />
         </Routes>
     <Footer/>
       </CartProvider>

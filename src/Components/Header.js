@@ -25,7 +25,7 @@ const Header = () => {
   const {totalItems} = useCart()
   return (
     <Div>
-        <Links to="/" >Home</Links>
+        <Links to="/products" >Products</Links>
         <Links to="/about" >About</Links>
         <Links to="/cart" ><FontAwesomeIcon icon={faCartShopping} />Cart({totalItems})</Links>
     </Div>
