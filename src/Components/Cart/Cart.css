@@ -50,3 +50,59 @@
 .btn-group button:hover{
     background-color: transparent;
 }
+.bottom-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: auto;
+}
+
+.promo-btn{
+    height: 40px;
+    margin-top: 30px;
+    font-weight: bolder;
+    background-color: transparent;
+    padding: 10px 30px;
+    border: 1px solid rgb(92, 128, 116);
+}
+
+.sb-total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.checkout-btn{
+    width: 90%;
+    height: 30px;
+    background-color: blue;
+    border: none;
+
+}
+.checkout-btn a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 110px;
+
+}
+.span{
+    display: inline;
+}
+hr{
+    width: 1px;
+    width: 100%;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons img{
+    width: 70px;
+}
+
+#icon{
+    color: white;
+    margin-left: 130px;
+}

@@ -1,9 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { useCart } from 'react-use-cart'
-import {faTrash, faCircleMinus, faCirclePlus} from '@fortawesome/free-solid-svg-icons'
+import {faTrash, faCircleMinus, faCirclePlus,faLock,faArrowRight, faArrowCircleRight, faArrowAltCircleRight, faArrowRightLong} from '@fortawesome/free-solid-svg-icons'
 import './Cart.css'
 import { Link } from 'react-router-dom'
+import visa from './images/Visa.png'
+import mastercard from './images/mastercard.png'
+import paypal from './images/paypal.png'
+
 
 const Cart = ({product}) => {
  const {isEmpty,
@@ -38,11 +42,22 @@ if(isEmpty) return <p>Your Cart is Empty</p>
       {list}
 
       <div className='bottom-container'>
-        <button>Promo Code?</button>
+        <button className='promo-btn'>Promo Code?</button>
         <div>
-          <h3>Subtotal: {cartTotal}</h3>
+          <div className='sb-total'>
+          <h3>Subtotal</h3><h3> ${cartTotal}</h3></div>
+          <br/>
           <p>Shipping taxes and discounts calculated at checkout</p>
-          <button><Link to="/checkout">Checkout</Link></button>
+          <br/>
+          <button className='checkout-btn'><Link to="/checkout">Checkout</Link> <FontAwesomeIcon icon={faArrowRightLong} id="icon"/></button>
+
+          <br/> <br/>
+          <span className='span'><FontAwesomeIcon icon={faLock}/> Secured by Snipcart</span>
+          <div className='icons'>
+            <img src={visa} title="visa"/>
+            <img src={mastercard} title="mastercard"/>
+            <img src={paypal} title="paypal"/>
+          </div>
         </div>
       </div>
     </div>

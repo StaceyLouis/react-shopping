@@ -3,11 +3,11 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Header from './Components/Header'
 import Store from './Components/Store/Store'
-import Footer from './Components/Footer'
 import Cart from './Components/Cart/Cart'
 import {CartProvider} from 'react-use-cart'
 import {Routes, Route} from 'react-router-dom'
 import Checkout from './Components/Checkout';
+import About from './Components/About';
 
 function App() {
   const [product, setProduct] = useState([])
@@ -24,11 +24,10 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/products' element={<Store product={product}/>}/>
-      <Route path="/about"/>
+      <Route path="/about" element={<About />}/>
       <Route path='/cart' element={<Cart product={product}/>}/>
       <Route path="/checkout" element={<Checkout/>} />
         </Routes>
-    <Footer/>
       </CartProvider>
     </div>
   );
